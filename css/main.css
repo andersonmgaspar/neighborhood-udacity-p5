@@ -1,0 +1,53 @@
+html, body {
+  font-family: 'Josefin Sans', sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  height: 100%;
+}
+
+#siteHeader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+}
+
+#hamburgerButton {
+  font-size: 30px;
+  cursor: pointer;
+  text-align: left;
+}
+
+#closeButton {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 45px;
+  margin-left: 50px;
+}
+
+#sideMenu {
+  position: fixed;
+  height: 100%;
+  width: 0;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 50px;
+}
+
+li {
+  cursor: pointer;
+}
+
+.error-map {
+  margin-top: 300px;
+}

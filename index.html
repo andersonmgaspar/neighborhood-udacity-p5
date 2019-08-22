@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+              crossorigin="anonymous">
+        <title>Florianópolis Night Life</title>
+    </head>
+    <body class="bg-dark text-light" >
+
+    <!-- Google Maps div -->
+    <div id="map">
+      <div id="errorMap" class="text-center display-4 error-map"></div>
+    </div>
+
+    <!-- Website header with search button -->
+    <div id="siteHeader" class="container-fluid text-center bg-dark text-light">
+      <div class="row">
+        <div class="col-sm-12 col-md-3 text-left">
+          <button id="hamburgerButton" class="btn btn-dark" type="button">
+            <span data-feather="plus-circle"></span>
+          </button>
+          <!--
+          <button id="markersButton" class="btn btn-dark hidden" type="button">
+            <span data-feather="map-pin"></span>
+          </button>
+          -->
+        </div>
+        <div class="col-sm-12 col-md-6 order-first order-md-last align-middle">
+          <h2>Floripa Underground</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- Side menu content -->
+    <div id="sideMenu" class="bg-dark text-light">
+      <button id="closeButton" class="btn btn-dark" type="button">
+        <span data-feather="x-circle"></span>
+      </button>
+      <br/><br/>
+      <input id="filterPlaces" class="form-control"
+             type="text" data-bind="textInput: filteredText"
+             placeholder="Search for a place listed below!" size="15">
+      <hr>
+      <ul id="placesList" class="list-group" data-bind="foreach: placesList">
+        <li class="list-group-item list-group-item-action" data-bind="text: name"></li>
+      </ul>
+    </div>
+
+      <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+      <script>feather.replace()</script>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-debug.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+              integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+              integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+      <script async defer
+          src=
+          "https://maps.googleapis.com/maps/api/js?key=AIzaSyCEkZVAEnasE6Rtin95XA5gOjjiUo_zxlM&libraries=places&v=3&callback=initMap">
+      </script>
+
+      <script src="js/menu.js"></script>
+      <script src="js/app.js"></script>
+    </body>
+</html>

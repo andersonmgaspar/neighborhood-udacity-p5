@@ -19,7 +19,8 @@ The app shows some hotspots in Florianópolis downtown, places that I like to go
 
 ## Instructions
 
-Just open the index.html in a modern browser
+1) Download all files in this project
+2) Just open the index.html in a modern browser
 
 
 ## Supporting Materials

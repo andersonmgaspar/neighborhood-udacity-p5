@@ -368,7 +368,7 @@ function getFoursquareContent(marker, infoWindow) {
                             '</div><br><div><img src="' + smallphotoPath + '"></div>'+
                             '<div class="text-dark"><a target="_blank" href="' + originalphotoPath + '">Powered by Foursquare</a></div>');
 
-                            
+
     }).fail(function(error){
       // Display error message, unable to get the photo
       infoWindow.setContent('<div class="text-dark font-weight-bold">'+ marker.title +'</div><br>'+
@@ -466,6 +466,15 @@ function findCoordinatesByName() {
     });
   });
 }
+
+// Display an error message if the Google Maps API do not load
+function googleError() {
+  const errorElement = document.getElementById("errorMap");
+  if (errorElement !== null){
+    errorElement.innerHTML = "This page didn't load Google Maps correctly!";
+  }
+}
+
 // ### End of Maps API calls ###
 
 

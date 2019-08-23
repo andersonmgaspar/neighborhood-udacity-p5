@@ -13,6 +13,7 @@
 
     <!-- Google Maps div -->
     <div id="map">
+      <!-- Display a message if there is a problem loading the Google Maps API -->
       <div id="errorMap" class="text-center display-4 error-map"></div>
     </div>
 
@@ -62,7 +63,7 @@
 
       <script async defer
           src=
-          "https://maps.googleapis.com/maps/api/js?key=AIzaSyCEkZVAEnasE6Rtin95XA5gOjjiUo_zxlM&libraries=places&v=3&callback=initMap">
+          "https://maps.googleapis.com/maps/api/js?key=AIzaSyCEkZVAEnasE6Rtin95XA5gOjjiUo_zxlM&libraries=places&v=3&callback=initMap" onerror="googleError()>
       </script>
 
       <script src="js/menu.js"></script>
